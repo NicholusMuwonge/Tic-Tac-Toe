@@ -60,7 +60,7 @@ class Logic:
     def __init__(self):
         self.boardLayout = Structure()
         self.prompt = Prompts()
-   
+
     def whoGoesFirst(self):
         # Randomly choose the player who goes first.
         if random.randint(0, 1) == 0:
@@ -194,6 +194,6 @@ class Logic:
                 break
 
 
-if __name__ == "__main__"
+if __name__ == "__main__":
     Logic().boardLayout.welcome()
     Logic().executor()
