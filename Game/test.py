@@ -2,6 +2,7 @@ from unittest import TestCase, mock
 from .app import Logic, Structure, Prompts
 from unittest.mock import patch
 import io
+import unittest
 
 
 class TestTic(TestCase):
@@ -40,3 +41,6 @@ class TestTic(TestCase):
     def test_its_a_tie(self):
         case = self.logic.itsATie([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
         self.assertTrue(case)
+
+if __name__ == "__main__":
+    unittest.main()
