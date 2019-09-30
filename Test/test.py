@@ -1,5 +1,5 @@
+from Game import app
 from unittest import TestCase, mock
-from Game.app import Logic, Structure, Prompts
 from unittest.mock import patch
 import io
 import unittest
@@ -8,9 +8,9 @@ import unittest
 class TestTic(TestCase):
 
     def setUp(self):
-        self.logic = Logic()
-        self.board = Structure()
-        self.Prompts = Prompts()
+        self.logic = app.Logic()
+        self.board = app.Structure()
+        self.Prompts = app.Prompts()
 
     def test_choose_whether_to_play_again(self):
         case = self.Prompts.playAgain()
@@ -41,6 +41,7 @@ class TestTic(TestCase):
     def test_its_a_tie(self):
         case = self.logic.itsATie([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
         self.assertTrue(case)
+
 
 if __name__ == "__main__":
     unittest.main()
