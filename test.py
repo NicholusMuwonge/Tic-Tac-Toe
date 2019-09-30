@@ -1,5 +1,5 @@
 from unittest import TestCase, mock
-from app import Logic, Structure, Prompts
+from Game.app import Logic, Structure, Prompts
 from unittest.mock import patch
 import io
 import unittest
