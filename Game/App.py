@@ -1,4 +1,6 @@
 from beautifultable import BeautifulTable
+import random
+
 
 class Structure:
 
@@ -32,3 +34,18 @@ class Prompts:
             return ['Y', 'A']
         else:
             return ['A', 'Y']
+
+
+class Logic:
+
+    # this is the class that holds all the logic to the game
+    def __init__(self):
+        self.boardLayout = Structure()
+        self.prompt = Prompts()
+    
+    def whoGoesFirst(self):
+        # Randomly choose the player who goes first.
+        if random.randint(0, 1) == 0:
+            return 'ai'
+        else:
+            return 'human'
