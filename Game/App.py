@@ -194,5 +194,6 @@ class Logic:
                 break
 
 
-Logic().boardLayout.welcome()
-Logic().executor()
+if __name__ == "__main__":
+    Logic().boardLayout.welcome()
+    Logic().executor()
