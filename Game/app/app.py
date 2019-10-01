@@ -39,14 +39,14 @@ class Prompts:
     def chooseCharacter(self):
         # choose letter
         letter = None
-        while not (letter == 'Y' or letter == 'A'):
-            print('Do you want to be Y or A?')
+        while not (letter == 'X' or letter == 'O'):
+            print('Do you want to be X or O?')
             letter = input().upper()
         # the index[0] is the player
-        if letter == 'Y':
-            return ['Y', 'A']
+        if letter == 'O':
+            return ['O', 'X']
         else:
-            return ['A', 'Y']
+            return ['X', 'O']
 
     def playAgain(self):
         # boolean with true/false response
@@ -103,10 +103,10 @@ class Logic:
     def getComputerMove(self, board, ai):
         # Given a board and the computer's letter, determine
         # where to move and return that move.
-        if ai == 'Y':
-            human = 'A'
+        if ai == 'O':
+            human = 'X'
         else:
-            human = 'Y'
+            human = 'O'
 
         # Ai alogrith I got from Invent with Python by Al Sweigart
         # and used it
