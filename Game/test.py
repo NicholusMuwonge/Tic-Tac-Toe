@@ -1,4 +1,4 @@
-from . import app
+from .app import Logic, Structure, Prompts
 from unittest import TestCase, mock
 from unittest.mock import patch
 import io
@@ -8,10 +8,10 @@ import unittest
 class TestTic(TestCase):
 
     def setUp(self):
-        ap = app
-        self.logic = ap.Logic()
-        self.board = ap.Structure()
-        self.Prompts = ap.Prompts()
+        # ap = app
+        self.logic = Logic()
+        self.board = Structure()
+        self.Prompts = Prompts()
 
     def test_choose_whether_to_play_again(self):
         case = self.Prompts.playAgain()
