@@ -1,4 +1,4 @@
-from .app import Logic, Structure, Prompts
+from game.app import Logic, Structure, Prompts
 from unittest import TestCase, mock
 from unittest.mock import patch
 import io
